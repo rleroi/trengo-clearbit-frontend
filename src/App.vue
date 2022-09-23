@@ -6,8 +6,8 @@
         <div class="value">{{state.person.fullName}}</div>
       </div>
       <div class="item">
-        <div class="title">Email</div>
-        <div class="value">{{state.person.email}}</div>
+        <div class="title">Company</div>
+        <div class="value">{{state.company.name}}</div>
       </div>
       <div class="item">
         <div class="title">Location</div>
@@ -15,32 +15,11 @@
       </div>
       <div class="item">
         <div class="title">LinkedIn</div>
-        <div class="value"><a href="{{state.person.linkedin}}" title="LinkedIn">{{state.person.linkedin}}</a></div>
+        <div class="value"><a :href="state.person.linkedin" target="_blank" title="LinkedIn">{{state.person.linkedin}}</a></div>
       </div>
       <div class="item">
         <div class="title">Role</div>
         <div class="value">{{state.person.role}}</div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="item">
-        <img :src="state.company.logo" />
-      </div>
-      <div class="item">
-        <div class="title">Name</div>
-        <div class="value">{{state.company.name}}</div>
-      </div>
-      <div class="item">
-        <div class="title">Employees</div>
-        <div class="value">{{state.company.employees}}</div>
-      </div>
-      <div class="item">
-        <div class="title">Website</div>
-        <div class="value">https://{{state.company.domain}}</div>
-      </div>
-      <div class="item">
-        <div class="title">Description</div>
-        <div class="value">{{state.company.description}}</div>
       </div>
     </div>
   </div>
@@ -74,6 +53,9 @@ onMounted(() => {
   .title {
     font-weight: bold;
     font-size: .75rem;
+  }
+  .value {
+    color: rgb(112, 118, 123);
   }
   .card {
     padding-bottom: 2rem;
