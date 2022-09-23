@@ -1,6 +1,5 @@
 <template>
   <div class="addon">
-    <h3>Clearbit</h3>
     <div class="card">
       <div class="item">
         <div class="title">Name</div>
@@ -75,5 +74,8 @@ onMounted(() => {
   .title {
     font-weight: bold;
     font-size: .75rem;
+  }
+  .card {
+    padding-bottom: 2rem;
   }
 </style>
