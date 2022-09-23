@@ -1,7 +1,7 @@
 <template>
   <div class="addon">
     <h3>Clearbit</h3>
-    <div class="person">
+    <div class="card">
       <div class="item">
         <div class="title">Name</div>
         <div class="value">{{state.person.fullName}}</div>
@@ -21,6 +21,27 @@
       <div class="item">
         <div class="title">Role</div>
         <div class="value">{{state.person.role}}</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="item">
+        <img :src="state.company.logo" />
+      </div>
+      <div class="item">
+        <div class="title">Name</div>
+        <div class="value">{{state.company.name}}</div>
+      </div>
+      <div class="item">
+        <div class="title">Employees</div>
+        <div class="value">{{state.company.employees}}</div>
+      </div>
+      <div class="item">
+        <div class="title">Website</div>
+        <div class="value">https://{{state.company.domain}}</div>
+      </div>
+      <div class="item">
+        <div class="title">Description</div>
+        <div class="value">{{state.company.description}}</div>
       </div>
     </div>
   </div>
@@ -51,8 +72,6 @@ onMounted(() => {
 })
 </script>
 <style scoped>
-  .item {
-  }
   .title {
     font-weight: bold;
     font-size: .75rem;
